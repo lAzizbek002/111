@@ -1,76 +1,168 @@
 #include <iostream>
-#include <iomanip>
+#include <cmath>
 using namespace std;
-int main() {
-    /*//20
-    float P_amount, A_rate;
-    cout << "Enter the principal amout($): ";
-    cin >> P_amount;
-    cout << "Enter the annual ratio(%): ";
-    cin >> A_rate;
-    cout << "Amount after 2 years: " << (P_amount * (1+(A_rate/100)) * (1+(A_rate/100))) << endl;
-    cout << "Compound interest: " << (P_amount * (1+(A_rate/100)) * (1+(A_rate/100))) - P_amount << endl;*/
+int main(){
+    /*//problem 1
+    int num;
+    cout << "Input number: ";
+    cin >> num;
+    if(num > 0){
+        cout << "Positive number.";
+    } else if(num < 0) {
+        cout << "Negative number.";
+    } else { "0 is neither positive or negative."}*/
 
-    /*//19
-    float P;
-    int R, T;
-    cout << "Enter the principal amount: ";
-    cin >> P;
-    cout << "Enter the rate of interest(%): ";
-    cin >> R;
-    cout << "Enter the time(years): ";
-    cin >> T;
-    cout << "Simple interest: " << (P * R * T)/100 << endl;*/
+    /*//problem2
+    int num;
+    cout << "Input number: ";
+    cin >> num;
 
-    /*//18
-    int fee, scholarship;
-    cout << "Enter the number of tuition fee: ";
-    cin >> fee;
-    cout << "Enter the scholarship rate(%): ";
-    cin >> scholarship;
-    cout << "Sholarship amount: " << (scholarship * fee)/100 << "\n";
-    cout << "Final tuition fee: " << fee - ((scholarship * fee)/100) << "\n";*/
+    if (num % 2 == 0) {
+        cout << "Even number." << endl;
+    } else {
+        cout << "Odd number." << endl;
+    }*/
 
-    /*//17
-    float initial, final;
-    cout << "Enter the intial price($): ";
-    cin >> initial;
-    cout << "Enter the final price($): ";
-    cin >> final;
-    cout << "Inflation rate: " << ((final - initial)/initial) * 100 << "%";*/
+    //problem3
+    /*int num, num2;
+    cout<<"Enter a number: ";
+    cin>>num;
+    cout<<"Enter another number: ";
+    cin>>num2;
+    if (num > num2) {
+        cout << "Largest number: " << num;
+    } else if (num < num2) {
+        cout << "Latgest number: " << num2;
+    }else { cout << "Equal numbers";}*/
 
-    /*//16
-    float productsum = 0, sum = 0,grade, credithours;
-    for (int i = 1; i <= 5; i++) {
-        cout<<"Enter grade for course "<<i<<":  ";
-        cin>>grade;
-        cout << "Enter credit hours for course "<<i<<":  ";
-        cin>>credithours;
-        productsum = productsum + (grade * credithours);
-        sum = sum + credithours;
+    /*//problem4
+    int num1, num2, num3;
+    cout << "Enter three numbers: ";
+    cin >> num1 >> num2 >> num3;
+    if (num1 >= num2 and num1>= num3) {
+        cout << "Largest number is " << num1 << endl;
+    } else if (num2 >= num1 and num2 >= num3) {
+        cout << "Largest number is " << num2 << endl;
+    } else cout << "Largest number is " << num3 << endl;*/
+
+    /*//problem5
+    int year;
+    cout << "Input year: ";
+    cin >> year;
+    if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
+        cout << "Leap year." << endl;
+    } else cout << "Not a lear year";*/
+
+    //problem6
+    /*int speed;
+    cout << "Input speed: ";
+    cin >> speed;
+    if (speed > 80) {
+        cout << "too fast" << endl;
+    } else if (speed < 20) {
+        cout << "too slow" << endl;
+    } else cout << "just right";*/
+
+    /*//problem7
+    int mark;
+    cout << "Input mark: ";
+    cin >> mark;
+    if (mark >= 50) cout << "Pass";
+    else cout << "Fail";*/
+
+    /*//problem8
+    int num;
+    cout << "Input number: ";
+    cin >> num;
+    if(num > 0){
+        cout << "Positive number.";
+    } else if(num < 0) {
+        cout << "Negative number.";
+    } else { "0"}*/
+
+    /*//problem9
+    string light;
+    cout << "Traffic light: ";
+    cin >> light;
+    if (light == "g") << "Go";
+    else if (light == "y") cout << "Get ready";
+    else if (light == "r") cout << "Stop";
+    else cout << "Invalid input";*/
+
+    /*//problem10
+    int grade;
+    cout << "Enter your grade: ";
+    cin >> grade;
+
+    if (0 <= grade && grade <= 59) cout << "F";
+    else if (60 <= grade && grade <= 69) cout << "D";
+    else if (70 <= grade && grade <= 79) cout << "C";
+    else if (80 <= grade && grade <= 89) cout << "B";
+    else if (90 <= grade && grade <= 100) cout << "A";
+    else cout << "Invalid input";*/
+
+    /*//problem11
+    int num1, num2;
+    cout << "Enter two numbers: ";
+    cin >> num1 >> num2;
+    if (num1 % num2 == 0) cout << num1 << " is divisible by " << num2;
+    else cout << num1 << " is not divisible by " << num2;*/
+
+    /*//problem12
+    int len1, len2, len3;
+    cout << "Enter three lengths: ";
+    cin >> len1 >> len2 >> len3;
+    if (len1 < len2 + len3 && len2 < len1 + len3 && len3 < len1 + len2) cout << "Triangle is valid.";
+    else cout << "Triangle is not valid.";*/
+
+    /*//problem13
+    char letter;
+    cout << "Enter a letter: ";
+    cin >> letter;
+    if (letter >= 'a' && letter <= 'z') cout << "Lower case alphabet";
+    else if (letter >= 'A' && letter <= 'Z') cout << "Upper case alphabet";
+    else cout << "It is not an alphabet";*/
+
+    /*//problem14
+    int weight1, weight2;;
+    float price1, price2;
+    cout<<"Enter the weight and price  for package 1: ";
+    cin>>weight1>>price1;
+    cout<<"Enter the weight and price for package 2: ";
+    cin>>weight2>>price2;
+    if(weight1/price1 > weight2/price2) cout << "Package 1 has better price";
+    else if(weight1/price1 < weight2/price2) cout << "Package 2 has better price";
+    else cout << "Both package 1 and package 2 have same price";*/
+
+    /*//problem15
+    int num;
+    cout << "Enter 3 digit a number: ";
+    cin >> num;
+    while (num > 999 || num < 100) {
+        cout << "Error! Enter a number between 100 and 999 : ";
+        cin >> num;
     }
-    cout<<"The average GPA: "<< fixed << setprecision(2) <<(productsum / sum);*/
+    if (num / 100 == num % 10) cout << num << " is palindrome.";
+    else cout << num << " is not palindrome.";*/
 
-    /*//15
-    float price;
-    int discount;
-    cout << "Enter the original price: ";
-    cin >> price;
-    cout << "Enter the discount(%): ";
-    cin >> discount;
-    cout << "Discount amount: " << price*discount/100 << endl;
-    cout << "Final price: " << price - (price*discount/100) << endl;*/
+    /*//problem16
+    int x, y;
+    cout << "Enter the cordinates of a point: ";
+    cin >> x >> y;
+    if (sqrt(x*x + y*y) <= 10) cout << "Point is inside the circle.";
+    else cout << "Point is outside the circle.";*/
 
-    /*//P1
-    int amount,number, sum = 0;
-    cout << "Amount of numbers to input: ";
-    cin >> amount;
-    for (int i = 0; i < amount; i++) {
-        cin >> number;
-        sum += number;
-    }
-    cout << "Sum: " << sum << endl;*/
+    //problem17
+    float gpa;
+    cout << "Enter your gpa: ";
+    cin >> gpa;
+    if (gpa < 3.0) cout << "You got no scholarship.";
+    else if (gpa < 3.5) cout << "You got 50% scholarship.";
+    else if (gpa < 4.0) cout << "You got 60% scholarship.";
+    else if (gpa < 4.5) cout << "You got 80% scholarship.";
+    else cout << "Invalid input.";
+
+
 
     return 0;
-
 }
